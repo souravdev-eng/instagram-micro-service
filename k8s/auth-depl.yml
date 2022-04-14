@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auth
+  template:
+    metadata:
+      labels:
+        app: auth
+    spec:
+      containers:
+        - name: auth
+          image: souravdeveloper/auth
+          env:
+            - name: DB_URL
+              value: mongodb+srv://Sourav:<password>@cluster0.vdmwg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+            - name: USER_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: db-user
+                  key: USER_NAME
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-password
+                  key: DB_PASSWORD
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: auth-srv
+spec:
+  selector:
+    app: auth
+  ports:
+    - name: auth
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
