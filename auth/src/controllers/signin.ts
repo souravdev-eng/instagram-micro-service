@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
-import { BadRequestError } from "../errors/badRequestError";
+import { BadRequestError } from "@instagram-dev/common";
 import { User } from "../models/userModel";
 
 export const signIn = async (

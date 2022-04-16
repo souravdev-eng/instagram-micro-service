@@ -1,6 +1,6 @@
 import "express-async-errors";
 import express from "express";
-import { errorHandler } from "./middleware/errorHandler";
+import { errorHandler } from "@instagram-dev/common";
 import { UserRouter } from "./routes/user.routes";
 
 const app = express();
