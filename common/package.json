@@ -1,0 +1,30 @@
+{
+  "name": "@instagram-dev/common",
+  "version": "1.0.10",
+  "description": "",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "clean": "npx rimraf ./build/*",
+    "build": "npm run clean && tsc",
+    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
+  },
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.3",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.3",
+    "express-validator": "^6.14.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
