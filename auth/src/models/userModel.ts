@@ -13,6 +13,8 @@ interface UserDoc extends mongoose.Document {
   fullName: string;
   userName: string;
   password: string;
+  profileURL: string;
+  correctPassword(userPassword: string, dbPassword: string): Promise<boolean>;
 }
 
 interface UserModel extends mongoose.Model<UserDoc> {
@@ -40,6 +42,9 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    profileURL: {
+      type: String,
+    },
   },
   {
     toJSON: {
@@ -55,6 +60,13 @@ const userSchema = new mongoose.Schema(
 
 userSchema.statics.build = function (attars: UserAttars) {
   return new User(attars);
+};
+
+userSchema.methods.correctPassword = async function (
+  userPassword: string,
+  dbPassword: string
+) {
+  return await bcrypt.compare(userPassword, dbPassword);
 };
 
 userSchema.pre("save", async function (next) {
