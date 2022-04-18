@@ -36,6 +36,7 @@ export const signup = async (
     email: user.email,
     fullName: user.fullName,
     profileURL: user.profileURL,
+    userName: user.userName,
   });
 
   res.status(201).send({ token, user });

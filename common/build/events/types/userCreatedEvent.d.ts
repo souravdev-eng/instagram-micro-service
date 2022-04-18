@@ -6,5 +6,6 @@ export interface UserCreatedEvent {
         fullName: string;
         email: string;
         profileURL: string;
+        userName: string;
     };
 }

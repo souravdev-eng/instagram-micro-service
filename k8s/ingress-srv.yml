@@ -24,3 +24,10 @@ spec:
                 name: followers-srv
                 port:
                   number: 3000
+          - path: /api/post/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: post-srv
+                port:
+                  number: 3000

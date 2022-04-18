@@ -39,7 +39,7 @@ const start = async () => {
   }
 
   app.listen(3000, () => {
-    console.log("Followers Service is running on port 3000");
+    console.log("Post Service is running on port 3000");
   });
 };
 
