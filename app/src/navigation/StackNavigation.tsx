@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SignUpScreen from "../screens/AuthScreen/SignUpScreen";
 import LogInScreen from "../screens/AuthScreen/LogInScreen";
 import HomeScreen from "../screens/HomeScreen";
+import BottomTabNavigation from "./BottomTabNavigation";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +21,7 @@ export const AppStackNavigation = () => {
   return (
     // @ts-ignore
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Home" component={BottomTabNavigation} />
     </Stack.Navigator>
   );
 };

@@ -8,6 +8,7 @@ const Icon = {
   Active_Home: require("./icons/Active_Home.png"),
   Active_Like: require("./icons/Active_Like.png"),
   Active_Search: require("./icons/Active_Search.png"),
+  Home: require("./icons/Home.png"),
   Add: require("./icons/Add.png"),
   Camera: require("./icons/Camera.png"),
   Comment: require("./icons/Comment.png"),
@@ -19,6 +20,7 @@ const Icon = {
   Tv: require("./icons/Tv.png"),
   Verify: require("./icons/Verify.png"),
   Logo: require("./icons/Logo.png"),
+  Search: require("./icons/Search.png"),
 };
 
 export { IMAGE, colors, FONTS as fonts, Icon };
