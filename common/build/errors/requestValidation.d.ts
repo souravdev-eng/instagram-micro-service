@@ -1,9 +1,9 @@
 import { ValidationError } from "express-validator";
 import { BaseError } from "./baseError";
 export declare class RequestValidationError extends BaseError {
-    error: ValidationError[];
+    errors: ValidationError[];
     statusCode: number;
-    constructor(error: ValidationError[]);
+    constructor(errors: ValidationError[]);
     errorResponse(): {
         message: any;
         field: string;

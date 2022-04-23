@@ -1,9 +1,8 @@
 import { StyleSheet, StatusBar } from "react-native";
-import { colors } from "../../constant";
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: StatusBar.currentHeight,
+    // marginTop: StatusBar.currentHeight,
   },
   icon: {
     width: 25,

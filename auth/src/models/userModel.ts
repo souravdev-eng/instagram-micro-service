@@ -14,6 +14,8 @@ interface UserDoc extends mongoose.Document {
   userName: string;
   password: string;
   profileURL: string;
+  numberOfPosts: number;
+  followers: number;
   correctPassword(userPassword: string, dbPassword: string): Promise<boolean>;
 }
 
@@ -41,6 +43,14 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
+    },
+    numberOfPosts: {
+      type: Number,
+      default: 0,
+    },
+    followers: {
+      type: Number,
+      default: 0,
     },
     profileURL: {
       type: String,

@@ -19,14 +19,15 @@ exports.RequestValidationError = void 0;
 var baseError_1 = require("./baseError");
 var RequestValidationError = /** @class */ (function (_super) {
     __extends(RequestValidationError, _super);
-    function RequestValidationError(error) {
+    function RequestValidationError(errors) {
         var _this = _super.call(this, "Request validation error") || this;
-        _this.error = error;
+        _this.errors = errors;
         _this.statusCode = 400;
+        Object.setPrototypeOf(_this, RequestValidationError.prototype);
         return _this;
     }
     RequestValidationError.prototype.errorResponse = function () {
-        return this.error.map(function (err) {
+        return this.errors.map(function (err) {
             return { message: err.msg, field: err.param };
         });
     };

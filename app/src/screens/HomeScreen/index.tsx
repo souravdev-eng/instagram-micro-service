@@ -8,9 +8,13 @@ import StoryLine from "../../components/StoryLine";
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
-      <Header />
-      <StoryLine />
       <FlatList
+        ListHeaderComponent={
+          <>
+            <Header />
+            <StoryLine />
+          </>
+        }
         data={[1, 2, 3, 4, 5]}
         renderItem={({ item, index }) => <PostCard />}
         keyExtractor={(index) => index.toString()}
