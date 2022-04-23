@@ -12,5 +12,5 @@ export const errorHandler = (
   if (err instanceof BaseError) {
     return res.status(err.statusCode).send({ errors: err.errorResponse() });
   }
-  res.status(500).send({ errors: [{ message: "Something went wrong" }] });
+  res.status(500).send([{ errors: { message: "Something went wrong!" } }]);
 };

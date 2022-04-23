@@ -3,11 +3,12 @@ import { BaseError } from "./baseError";
 
 export class RequestValidationError extends BaseError {
   statusCode = 400;
-  constructor(public error: ValidationError[]) {
+  constructor(public errors: ValidationError[]) {
     super("Request validation error");
+    Object.setPrototypeOf(this, RequestValidationError.prototype);
   }
   errorResponse() {
-    return this.error.map((err) => {
+    return this.errors.map((err) => {
       return { message: err.msg, field: err.param };
     });
   }
