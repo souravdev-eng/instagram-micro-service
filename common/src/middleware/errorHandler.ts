@@ -8,7 +8,7 @@ export const errorHandler = (
   next: NextFunction
 ) => {
   console.log(err);
-  console.log(err.stack);
+
   if (err instanceof BaseError) {
     return res.status(err.statusCode).send({ errors: err.errorResponse() });
   }
