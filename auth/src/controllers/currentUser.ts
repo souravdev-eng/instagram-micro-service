@@ -5,7 +5,7 @@ export const currentUser = async (
   res: Response,
   next: NextFunction
 ) => {
-  const { email, id, fullName } = req.currentUser!;
+  const { email, id, userName } = req.currentUser!;
 
-  res.send({ currentUser: email, id, fullName });
+  res.send({ email, id, userName });
 };

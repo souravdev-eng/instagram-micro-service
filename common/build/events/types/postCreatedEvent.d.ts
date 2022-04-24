@@ -5,8 +5,6 @@ export interface PostCreatedEvent {
         id: string;
         title: string;
         photoUrl: string;
-        userId: {
-            id: string;
-        };
+        userId: string;
     };
 }

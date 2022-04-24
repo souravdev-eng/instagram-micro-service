@@ -285,10 +285,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@instagram-dev/common@1.0.16":
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/@instagram-dev/common/-/common-1.0.16.tgz#ae4887514fb81761535d4446b2ac9c6e43b09ab4"
-  integrity sha512-yP0TW3c3E2l5mqGYchx/Fpf2pcEPmPsaLDOeM4W9QCkGFsUnsZ/TvqVegYoxxMZKEquovIIPXgEJ0L9Raa003A==
+"@instagram-dev/common@1.0.18":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@instagram-dev/common/-/common-1.0.18.tgz#74ddc45e332f366954b73ef206979e9fc13de3c2"
+  integrity sha512-uc+NFfIfFiS98/J3t58Hw0Yt1n3qMN0odh6Pmyyt40zbhA6tHICV/pz6RcEaRKdTDfrX6U/vLOXvbbWWxor8pQ==
   dependencies:
     "@types/bcryptjs" "^2.4.2"
     "@types/express" "^4.17.13"

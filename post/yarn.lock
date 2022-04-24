@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@instagram-dev/common@^1.0.14":
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/@instagram-dev/common/-/common-1.0.14.tgz#b02d7e63036362a30e3971cc908389a5ce476170"
-  integrity sha512-kXrXvgEzSPdidCq3GKus94MSmrwDsr3hf7QEmhn3ZobYqaAhlcvwUtNXAklV8uqs390CjhdHIgbn+HVTVBtJxA==
+"@instagram-dev/common@1.0.20":
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/@instagram-dev/common/-/common-1.0.20.tgz#6c505cf4f32f3468d72f8d4a026863967358a8a2"
+  integrity sha512-qd2E/Og2Z6/7gMvH8rnxI1eAjkZOVhxyLnkssdOJ5pt3rgeVL5jQK/J3eFgvZHEOYKZ6qn117cXT9GEJ30Ki2A==
   dependencies:
     "@types/bcryptjs" "^2.4.2"
     "@types/express" "^4.17.13"

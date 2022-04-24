@@ -1,8 +1,7 @@
 import "express-async-errors";
 import express from "express";
 import { errorHandler } from "@instagram-dev/common";
-import { UserCreatedListener } from "./events/listeners/userCreatedListener";
-import { natsWrapper } from "./natsWrapper";
+import { postRoute } from "./routes/postRoute";
 
 const app = express();
 
@@ -10,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 // @routes
-// app.use(UserRouter);
+app.use(postRoute);
 
 // @Global Error Handler
 app.use(errorHandler);
