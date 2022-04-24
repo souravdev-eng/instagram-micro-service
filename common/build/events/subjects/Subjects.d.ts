@@ -1,3 +1,4 @@
 export declare enum Subjects {
-    UserCreated = "user:created"
+    UserCreated = "user:created",
+    PostCreated = "post:created"
 }
