@@ -1,7 +1,10 @@
 import "express-async-errors";
 import express from "express";
+
 import { errorHandler } from "@instagram-dev/common";
 import { postRoute } from "./routes/postRoute";
+
+// specify the path
 
 const app = express();
 

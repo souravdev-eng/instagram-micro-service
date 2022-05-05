@@ -1,4 +1,7 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
+
 import { app } from "./app";
 import { UserCreatedListener } from "./events/listeners/userCreatedListener";
 import { natsWrapper } from "./natsWrapper";
@@ -38,7 +41,7 @@ const start = async () => {
     process.exit();
   }
 
-  app.listen(3000, () => {
+  app.listen(4000, () => {
     console.log("Post Service is running on port 3000");
   });
 };

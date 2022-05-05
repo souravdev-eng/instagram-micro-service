@@ -16,7 +16,7 @@ const start = async () => {
     process.exit();
   }
 
-  app.listen(3000, () => {
+  app.listen(4000, () => {
     console.log("Auth Service is running on port 3000");
   });
 };
