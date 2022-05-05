@@ -26,3 +26,4 @@ __exportStar(require("./events/publisher"), exports);
 __exportStar(require("./events/subjects/Subjects"), exports);
 __exportStar(require("./events/types/userCreatedEvent"), exports);
 __exportStar(require("./events/types/postCreatedEvent"), exports);
+__exportStar(require("./events/types/postTagCreatedEvent"), exports);

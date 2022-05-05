@@ -10,3 +10,4 @@ export * from "./events/publisher";
 export * from "./events/subjects/Subjects";
 export * from "./events/types/userCreatedEvent";
 export * from "./events/types/postCreatedEvent";
+export * from "./events/types/postTagCreatedEvent";
